@@ -21,21 +21,21 @@ El objetivo de este software es proporcionar una herramienta pedagógica interac
 Arquitectura del Código
 El sistema se divide en tres capas lógicas bien definidas:
 
-Capa de Simulación (quicksort_steps): Implementa el algoritmo de Quicksort (esquema de partición de Lomuto). A diferencia de una implementación estándar, esta función actúa como un generador de estados, capturando cada comparación e intercambio en una lista de diccionarios que sirven como "frames" para la animación.
+1.- Capa de Simulación (quicksort_steps): Implementa el algoritmo de Quicksort (esquema de partición de Lomuto). A diferencia de una implementación estándar, esta función actúa como un generador de estados, capturando cada comparación e intercambio en una lista de diccionarios que sirven como "frames" para la animación.
 
-Capa de Renderizado (Matplotlib): Utiliza un gráfico de barras donde la altura de cada barra representa el valor del dato. Configura un entorno visual de alto contraste ("Dark Mode") para resaltar los elementos clave mediante un código de colores específico.
+2.- Capa de Renderizado (Matplotlib): Utiliza un gráfico de barras donde la altura de cada barra representa el valor del dato. Configura un entorno visual de alto contraste ("Dark Mode") para resaltar los elementos clave mediante un código de colores específico.
 
-Capa de Animación (FuncAnimation): Gestiona el flujo temporal de la visualización, actualizando las propiedades de las barras (altura y color) y los metadatos (mensajes informativos y barra de progreso) de forma sincronizada.
+3.- Capa de Animación (FuncAnimation): Gestiona el flujo temporal de la visualización, actualizando las propiedades de las barras (altura y color) y los metadatos (mensajes informativos y barra de progreso) de forma sincronizada.
 
 Lógica de Colores y Semántica Visual
 Para mejorar la interpretabilidad, el visualizador emplea la siguiente convención:
 
-Naranja (P): Indica el elemento seleccionado como pivote.
+>Naranja (P): Indica el elemento seleccionado como pivote.
 
-Azul: Resalta los elementos que están siendo comparados actualmente.
+>Azul: Resalta los elementos que están siendo comparados actualmente.
 
-Amarillo: Identifica los elementos que están siendo intercambiados de posición.
+>Amarillo: Identifica los elementos que están siendo intercambiados de posición.
 
-Verde: Representa los elementos que ya han alcanzado su posición final garantizada.
+>Verde: Representa los elementos que ya han alcanzado su posición final garantizada.
 
 Líneas Punteadas: Delimitan el rango del subarreglo activo procesado por la recursión actual.
