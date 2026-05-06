@@ -38,4 +38,4 @@ Para mejorar la interpretabilidad, el visualizador emplea la siguiente convenci�
 
 >Verde: Representa los elementos que ya han alcanzado su posición final garantizada.
 
-Líneas Punteadas: Delimitan el rango del subarreglo activo procesado por la recursión actual.
+>Líneas Punteadas: Delimitan el rango del subarreglo activo procesado por la recursión actual.
